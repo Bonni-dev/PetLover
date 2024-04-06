@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PetLover</string>
+    <string name="input_text_field_component_enter_your_name">Enter your name</string>
 </resources>
