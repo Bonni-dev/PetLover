@@ -1,4 +1,4 @@
-package com.example.petlover.ui.theme
+package com.example.petlover.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

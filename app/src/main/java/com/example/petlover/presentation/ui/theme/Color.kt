@@ -1,4 +1,4 @@
-package com.example.petlover.ui.theme
+package com.example.petlover.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
