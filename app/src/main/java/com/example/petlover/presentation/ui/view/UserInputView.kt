@@ -26,8 +26,8 @@ import com.example.petlover.presentation.ui.data.UserDataUiEvents
 @Composable
 fun UserInputScreen(
     viewModel: UserInputViewModel,
-    showDetailsScreen: (valuePair: Pair<String, String>)
-    ) {
+    showDetailsScreen: (valuePair: Pair<String, String>) -> Unit
+) {
     Surface(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -76,12 +76,14 @@ fun UserInputScreen(
             Spacer(modifier = Modifier.weight(1f))
             if (viewModel.isValidState()) {
                 ButtonComponent(
-                    goToDetailsScreen = showDetailsScreen(
-                        Pair(
-                            viewModel.uiState.value.nameEntered,
-                            viewModel.uiState.value.petChoosen
+                    goToDetailsScreen = {
+                        showDetailsScreen(
+                            Pair(
+                                viewModel.uiState.value.nameEntered,
+                                viewModel.uiState.value.petChoosen
+                            )
                         )
-                    )
+                    }
                 )
             }
         }

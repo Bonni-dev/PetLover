@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun TextBox(title: String, descripton: String) {
+fun TextBox(title: String, descripton: String?) {
     Column {
         Text(
             text = title,
@@ -21,11 +21,13 @@ fun TextBox(title: String, descripton: String) {
 
         Spacer(modifier = Modifier.size(8.dp))
 
-        Text(
-            text = descripton,
-            fontSize = 16.sp,
-            color = Color.DarkGray
-        )
+        descripton?.let {
+            Text(
+                text = it,
+                fontSize = 16.sp,
+                color = Color.DarkGray
+            )
+        }
     }
 }
 
